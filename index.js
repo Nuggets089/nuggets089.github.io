@@ -1,0 +1,2 @@
+alert("WELCOME TO THE AMAZING DIGITAL CIRCUS XD")
+alert(" ")
