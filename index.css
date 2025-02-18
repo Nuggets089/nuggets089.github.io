@@ -1,5 +1,5 @@
 body {
-    background-color: #739dd4;
+    background-color: #00b3b9;
 }
 
 h1 {
@@ -9,10 +9,17 @@ h1 {
 
 p {
     font:oblique bold 120% cursive;
-    color: white;
+    color: rgba(0, 0, 0, 0.966);
 }
 
 footer {
-    font:oblique bold 120% cursive;
-    color: aliceblue
+    font:oblique bold 120% xx-large;
+    color: rgba(0, 0, 0, 0.836)
 }
+
+p1 {
+    font:oblique bold 120% cursive;
+    color: rgb(167, 55, 55);
+}
+
+   
