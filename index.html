@@ -1,36 +1,190 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>unknow</title>
-    <link rel="stylesheet" href="./index.css">
-    <link rel="icon" href="bacon.png" type="image/png"sizes="16x16">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nuggets - Página Personal</title>
+    <link rel="icon" href="bacon.png" type="image/png" sizes="16x16">
+    <style>
+        :root {
+            --primary-color: #ff9f43;
+            --secondary-color: #6c5ce7;
+            --text-color: #2d3436;
+            --background-color: #f9f9f9;
+            --card-color: #ffffff;
+            --accent-color: #fd79a8;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem;
+            border-radius: 0 0 30px 30px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            font-size: 1.5rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+        }
+        
+        .about-section {
+            background-color: var(--card-color);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+        
+        .profile-image {
+            display: block;
+            width: 200px;
+            height: 200px;
+            object-fit: contain;
+            margin: 1rem auto 2rem;
+            border-radius: 50%;
+            border: 5px solid var(--primary-color);
+            padding: 5px;
+            background-color: white;
+            transition: transform 0.3s ease;
+        }
+        
+        .profile-image:hover {
+            transform: scale(1.05) rotate(5deg);
+        }
+        
+        .message {
+            font-size: 1.2rem;
+            background-color: var(--card-color);
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border-left: 5px solid var(--accent-color);
+        }
+        
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+        
+        .btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 600;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-secondary {
+            background-color: var(--secondary-color);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--card-color);
+            color: var(--text-color);
+            border-radius: 20px 20px 0 0;
+            margin-top: 3rem;
+            box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .footer-text {
+            font-weight: 500;
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            header {
+                padding: 2rem 1rem;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .profile-image {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>hello, I'm nuggets!</h1>
-    <p>Hi my name is nuggets, and welcome to my website :3 </P>
-    <p>Esenario de prueba</P>
-    <img src="bacon.png" width="300" height="341"/>
-   
-   <br><br>
-   <p1>Hello little beetles, I hope you are well and please follow me on Roblox otherwise I will go to your house... </p1>
-   <br><br>
-    <a href="Trollface.png">
-     <button>unknow xd</button>
-    </a>
-    <a href="https://www.roblox.com/es/users/7339164184/profile">
-        <button>my roblox's profile</button>
-       </a>
+    <header>
+        <h1>¡Hola, soy Nuggets!</h1>
+        <p class="subtitle">Bienvenido a mi sitio web personal :3</p>
+    </header>
     
-    <br><br>
+    <div class="container">
+        <section class="about-section">
+            <img src="bacon.png" alt="Imagen de perfil" class="profile-image">
+            <p>Hola, me llamo Nuggets y esta es mi página web personal. ¡Estoy muy feliz de que estés aquí!</p>
+        </section>
+        
+        <div class="message">
+            <p>Hello little beetles, I hope you are well and please follow me on Roblox otherwise I will go to your house...</p>
+        </div>
+        
+        <div class="btn-container">
+            <a href="Trollface.png" class="btn">Unknown xd</a>
+            <a href="https://www.roblox.com/es/users/7339164184/profile" class="btn btn-secondary">Mi perfil de Roblox</a>
+        </div>
+    </div>
     
-   
     <footer>
-        by nuggets your friend or no 
+        <p class="footer-text">By Nuggets, tu amigo... o no 😉</p>
     </footer>
-   
-    <script src="index.js"></script>
 </body>
 </html>
