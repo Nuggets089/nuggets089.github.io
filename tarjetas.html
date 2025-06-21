@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividades Escolares</title>
+ 
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .actividades-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            justify-items: center;
+        }
+
+        .tarjeta {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 280px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .circulo {
+            background: white;
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .tarjeta:hover {
+            transform: translateY(-10px);
+        }
+
+        .tarjeta:hover .circulo {
+            transform: scale(1.05);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+        }
+
+        .circulo::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 0%, rgba(255,255,255,0.1) 50%, transparent 100%);
+            transform: translateX(-100%);
+            transition: transform 0.6s;
+        }
+
+        .tarjeta:hover .circulo::before {
+            transform: translateX(100%);
+        }
+
+        .imagen {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            transition: all 0.3s ease;
+        }
+        
+        .titulo {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .descripcion {
+            font-size: 0.9rem;
+            color: #ece1e1;
+            text-align: center;
+            line-height: 1.4;
+        }
+
+        .ciencias { --color: #4CAF50; }
+        .matematicas { --color: #FF9800; }
+        .arte { --color: #E91E63; }
+        .deportes { --color: #2196F3; }
+
+        .tarjeta-link {
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+                margin-bottom: 30px;
+            }
+            
+            .actividades-grid {
+                gap: 30px;
+            }
+            
+            .tarjeta {
+                width: 250px;
+                height: 250px;
+                padding: 25px;
+            }
+            
+        .tarjeta:hover .titulo {
+            color: var(--color);
+        }
+
+        .tarjeta-link:hover {
+            text-decoration: none;
+        }
+            
+            .imagen {
+                width: 70px;
+                height: 70px;
+            }
+            
+            .descripcion {
+                font-size: 0.85rem;
+            }
+        }
+        
+    </style>
+</head>
+    <body>
+        <h1>🎓 Actividades Escolares</h1>
+    <div class="container">   
+    <div class="actividades-grid">
+            <!-- Tarjeta de Ciencias -->
+            <div class="tarjeta ciencias">
+                <a href="ejemplo.html" class="tarjeta-link">
+                    <h3 class="titulo">Ciencias</h3>
+                    <div class="circulo">
+                        <img src="moto.jpg" alt="Ciencias" class="imagen">
+                    </div>
+                    <p class="descripcion">Experimentos fascinantes y descubrimientos que despiertan la curiosidad científica</p>
+                </a>
+            </div>
+
+             <!-- Tarjeta de Arte -->
+            <div class="tarjeta arte">
+                <a href="https://www.ejemplo.com/arte" class="tarjeta-link">
+                    <h3 class="titulo">Arte</h3>
+                    <div class="circulo">
+                        <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=400&h=400&fit=crop&crop=center" alt="Arte" class="imagen">
+                    </div>
+                    <p class="descripcion">Expresión creativa a través de pintura, dibujo y manualidades coloridas</p>
+                </a>
+            </div>
+            
+            <!-- Tarjeta de Matemáticas -->
+            <div class="tarjeta matematicas">
+                <a href="documentacion.html" class="tarjeta-link">
+                    <h3 class="titulo">Matemáticas</h3>
+                    <div class="circulo">
+                        <img src="https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?w=400&h=400&fit=crop&crop=center" alt="Matemáticas" class="imagen">
+                    </div>
+                    <p class="descripcion">Resolución de problemas y desarrollo del pensamiento lógico de forma divertida</p>
+                </a>
+            </div>
+            
+            <!-- Tarjeta de Arte -->
+            <div class="tarjeta arte">
+                <a href="https://www.ejemplo.com/arte" class="tarjeta-link">
+                    <h3 class="titulo">Arte</h3>
+                    <div class="circulo">
+                        <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=400&h=400&fit=crop&crop=center" alt="Arte" class="imagen">
+                    </div>
+                    <p class="descripcion">Expresión creativa a través de pintura, dibujo y manualidades coloridas</p>
+                </a>
+            </div>
+            
+            <!-- Tarjeta de Deportes -->
+            <div class="tarjeta deportes">
+                <a href="https://www.ejemplo.com/deportes" class="tarjeta-link">
+                    <h3 class="titulo">Deportes</h3>
+                    <div class="circulo">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=400&fit=crop&crop=center" alt="Deportes" class="imagen">
+                    </div>
+                    <p class="descripcion">Actividades físicas que promueven el trabajo en equipo y la vida saludable</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <footer style="text-align: center; margin-top: 50px; color: white;">
+        <p>© 2025 Actividades Escolares. Todos los derechos reservados, este software esta protegido por derechos de autor.  </p>
+        <p>Se aplican todas las normativas legales, nacionales e internacionales.</p>
+        <p>Desarrollado por: Liz de Lora.</p>
+        <p>$5,000,000.00 para poder ver el codigo fuente y pagados en moneda de curso legal de los Estados Unidos de América, esto no es ni la catedral ni esa cosa del bazar.</p>
+    </footer>
+    <script>
+        // Las tarjetas ahora tienen enlaces directos, no necesitan JavaScript adicional
+        console.log('Plantilla de actividades escolares cargada correctamente');
+    </script>
+    </body>
+</html>
