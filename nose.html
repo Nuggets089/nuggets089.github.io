@@ -5,19 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Te Prodria resultar util</title>
    <link rel="stylesheet" href="styles2.css">
-    <script>
-        const sound = document.getElementById("glitch-sound");
-
-        function playGlitch() {
-            sound.currentTime = 0;
-            sound.play();
-        }
-    </script>
+    
     <style>
     
     </style>
 </head>
 <body>
+    <audio id="c00lkidd"src="c00lkidd_clip_0_to_15.mp3" preload="auto"></audio>
     <header>
         <h1>Bienvenido</h1>
         <h2 class="subtitle">Esta es una página que podría resultar útil.</h2>
@@ -114,6 +108,21 @@
                 </a>
             </div>
          </section>
+         <script>
+        
+        window.addEventListener("scroll", () => {
+                const sound = document.getElementById("c00lkidd");
+                sound.volume = 1.0; // Ajusta el volumen del sonido
+                sound.currentTime = 0; 
+                sound.play();
+
+                setTimeout(() => {
+                  sound.pause();
+                  sound.currentTime = 0; // Reinicia el sonido
+                }, 50000); // Detiene el sonido después de 50 segundos
+            });
+        
+    </script>
          
          
       </div>

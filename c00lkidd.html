@@ -10,11 +10,12 @@
     </style>
 </head>
 <body>
+     <audio id="c00lkidd" src="c00lkidd_clip_0_to_15.mp3" preload="auto"></audio>
     <header>
         <h1>Bienvenido</h1>
         <p class="subtitle">Esta es una página que podría resultar útil.</p>
     </header>
-
+     
     <div class="content">
     <h3 class="parrafo">El Enigma de c00lkidd: El Hacker que se Volvió Leyenda
 Capítulo 1: Los Orígenes
@@ -22,7 +23,7 @@ En los primeros años de Roblox, allá por 2008, cuando el mundo virtual era aú
 Lo que sí es cierto es que c00lkidd fundó un grupo llamado "Team c00lkidd", con el objetivo no de destruir, sino de controlar Roblox. A través de scripts y exploits, sus seguidores modificaban juegos, alteraban mundos y dejaban mensajes como firmas digitales. Sus avatares, casi siempre con una camiseta roja y el nombre "c00lkidd" en blanco, se convirtieron en símbolos de caos y resistencia.
     </h3>
     </div>
-
+ <img src="nosedenuevo.jpg" alt="c00lkidd" class="imagen">
     <div class="content">
     <h3 class="parrafo">Capítulo 2: La Caída
 A medida que su notoriedad crecía, también lo hacía la respuesta de Roblox Corporation. Moderadores comenzaron a cazar cuentas relacionadas con Team c00lkidd, baneando usuarios, cerrando juegos alterados y reforzando el sistema contra exploits. Pero por cada cuenta baneada, parecía surgir otra con mayor habilidad y agresividad.
@@ -56,4 +57,25 @@ A medida que la historia de c00lkidd se difundía, su influencia se sentía en c
     <h3 class="parrafo">Capítulo 8: La Reflexión Final
 La historia de c00lkidd es un testimonio del poder de la comunidad y la creatividad en el mundo digital. Aunque su legado está envuelto en misterio y controversia, su impacto en Roblox es innegable. Nos recuerda que detrás de cada avatar, cada juego y cada línea de código, hay una historia esperando ser contada.
 </h3>
+ <footer>
+            <p1>esto aun no esta listo por favor tenga paciencia con esta pagina</p1> </footer>
+
 </body>
+
+ <script>
+            // Reproduce el sonido al hacer scroll
+        window.addEventListener("scroll", () => {
+                const sound = document.getElementById("c00lkidd");
+                sound.volume = 1.0; // Ajusta el volumen del sonido
+                sound.currentTime = 0; 
+                sound.play();
+
+                setTimeout(() => {
+                  sound.pause();
+                  sound.currentTime = 0; // Reinicia el sonido
+                }, 50000); // Detiene el sonido después de 50 segundos
+            });
+        
+    </script>
+    
+</html>
