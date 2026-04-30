@@ -1,0 +1,65 @@
+:root {
+            --primary-color: #ff9f43;
+            --secondary-color: #6c5ce7;
+            --text-color: #ffffff;
+            --background-color: #cf4646cf;
+            --card-color: #df8888;
+            --accent-color: #fd79a8;
+        }
+       
+        * {
+            margin: 0%;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body{
+            background-image: url('pngtree-stunning-4k-image-showcasing-the-beauty-of-nature-image_15718240.jpg');
+           background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+        
+          }
+
+         img{
+          margin: 70px auto;
+          width: 300px;
+          display: block;
+          
+
+         }
+         
+         header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem;
+            border-radius: 0 0 30px 30px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+         h3 {
+          
+            color: rgb(241, 11, 11);
+            margin: 15px 0;
+            padding: 10px;
+            border-bottom: 1px solid var(--secondary-color);
+            text-align: justify;
+        }
+
+
+        h4 {
+            color: rgb(11, 17, 30);
+            margin: 15px 0;
+            padding: 10px;
+            border-bottom: 1px solid var(--secondary-color);
+            text-align: justify;
+            
+        }
+
